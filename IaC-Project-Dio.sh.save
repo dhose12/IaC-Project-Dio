@@ -1,0 +1,23 @@
+#!/bin/bash
+sudo apt update && upgrade -y
+echo "Criando diretorios para novos usuários do sistema..."
+echo "################### Loading ########################"
+
+mkdir /publico
+mkdir /adm
+mkdir /ven
+mkdir /sec
+
+echo "Criando grupos para inclusão de novos usuários do sistema..."
+echo "################## Loading #########################"
+
+groupadd GRP_ADM 
+groupadd GRP_VEN
+groupadd GRP_SEC
+
+echo "Criando usuários do sistema..."
+echo "################## Loading #########################"
+
+useradd Mary -m -s "Usuário do grupo ADM" /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_ADM
+useradd Juca -m -s "useradd mary -m -s "" /bin/bash -p $(openssl passwd -crypt Senha123) ->" /bin/bash -p $(openssl passwd -crypt Senha123) ->
+useradd Joao -m -s "" /bin/bash -p $(openssl passwd -crypt Senha123) ->
